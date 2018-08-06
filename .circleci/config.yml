@@ -20,5 +20,7 @@ jobs:
           name: "deploy the latest master"
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git config user.name "kyleroush"
+
               npm run deploy
             fi
