@@ -20,7 +20,7 @@ jobs:
           name: "deploy the latest master"
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              git config user.email "roush.kyle@gmail.com"
-
+              git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
+              git config --global user.name "$GH_NAME" > /dev/null 2>&1
               npm run deploy
             fi
