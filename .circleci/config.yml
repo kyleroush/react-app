@@ -2,14 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:16.04
+      - image: circleci/node:8
     steps:
       - checkout
+      # - run:
+      #     name: "Install Dependencies"
+      #     command: |
+      #       apt-get update
+      #       apt-get -y install npm
       - run:
-          name: "Install Dependencies"
-          command: |
-            apt-get update
-            apt-get -y install npm
+          name: Setup Dependencies
+          command: npm install
       - run:
           name: "Run Tests"
           command: echo "Run any tests here."
