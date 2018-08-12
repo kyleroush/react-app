@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Square from './Square.js';
 
-class Board extends React.Component {
+class Board extends Component {
   renderSquare(i, j) {
     return (
       <Square key={i+","+j}

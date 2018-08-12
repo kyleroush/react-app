@@ -8,64 +8,92 @@ class App extends Component {
     this.state = {
       history: [
         {
-          squares: [...Array(3)].map(e => Array(3).fill(null))
+          squares: [...Array(3)].map(e => Array(3).fill(null)),
+          xpos: undefined,
+          ypos: undefined
         }
       ],
       stepNumber: 0,
-      xIsNext: true
+      xIsNext: true,
+      winner: undefined
     };
   }
 
-  calculateWinner(squares) {
+  calculateWinner(squares, i, j) {
     const lines = [
-      [[0,0], [0,1], [0,2]],
-      [[1,0], [1,1], [1,2]],
-      [[2,0], [2,1], [2,2]],
-      [[0,0], [1,0], [2,0]],
-      [[0,1], [1,1], [2,1]],
-      [[0,2], [1,2], [2,2]],
-      [[0,0], [1,1], [2,2]],
-      [[0,2], [1,1], [2,0]]
-    ];
-    for (let i = 0; i < lines.length; i++) {
-      const [a, b, c] = lines[i];
-      if (squares[a[0]][a[1]] && squares[a[0]][a[1]] === squares[b[0]][b[1]] && squares[b[0]][b[1]] === squares[c[0]][c[1]]) {
-        return squares[a[0]][a[1]];
+      [1,-1],[1,0],[1,1],
+      [0,-1],[0,1],
+      [-1,1],[-1,0],[-1,-1]];
+
+    if(i === undefined || j === undefined) {
+      return false;
+    }
+
+    var spot = squares[i][j]
+
+    if(spot === null) {
+      return false;
+    }
+
+    for (var pair in lines) {
+      const [x, y] = lines[pair];
+      var matched = true
+      for (var v in [1,2,3]) {
+        var ii = i + (x * v);
+        var jj = j + (y * v);
+        if (ii<0 || jj<0 || ii>=3||jj>=3) {
+          matched = false;
+          break
+        } else if(spot !== squares[ii][jj]) {
+          matched = false;
+          break;
+        }
+      }
+      if(matched) {
+        return true;
       }
     }
-    return null;
+    return false;
   }
 
   handleClick(i, j) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = JSON.parse(JSON.stringify(current.squares));
-    if (this.calculateWinner(squares) || squares[i][j]) {
+    if (squares[i][j] || this.state.winner) {
       return;
     }
     squares[i][j] = this.state.xIsNext ? "X" : "O";
+
+    var winner = this.calculateWinner(squares, i, j)
+
     this.setState({
       history: history.concat([
         {
-          squares: squares
+          squares: squares,
+          xpos: i,
+          ypos: j
         }
       ]),
       stepNumber: history.length,
-      xIsNext: !this.state.xIsNext
+      xIsNext: !this.state.xIsNext,
+      winner: winner
     });
   }
 
   jumpTo(step) {
-    this.setState({
-      stepNumber: step,
-      xIsNext: (step % 2) === 0
+    this.setState(function (state, props) {
+      return {
+        stepNumber: step,
+        xIsNext: (step % 2) === 0,
+        winner: this.calculateWinner(state.history[step].squares, state.history[step].xpos, state.history[step].ypos)
+      }
     });
   }
 
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
-    const winner = this.calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
       const desc = move ?
@@ -79,8 +107,8 @@ class App extends Component {
     });
 
     let status;
-    if (winner) {
-      status = "Winner: " + winner;
+    if (this.state.winner) {
+      status = "Winner: " + (this.state.xIsNext ? "O" : "X");
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
