@@ -38,7 +38,7 @@ class App extends Component {
     for (var pair in lines) {
       const [x, y] = lines[pair];
       var matched = true
-      for (var v in [1,2,3,4]) {
+      for (var v in [0,1,2,3]) {
         var ii = i + (x * v);
         var jj = j + (y * v);
         if (ii<0 || jj<0 || ii>=squares.length||jj>=squares[i].length) {
@@ -50,6 +50,8 @@ class App extends Component {
         }
       }
       if(matched) {
+        console.log("loc " + i + ", " + j)
+        console.log("dir " + x + ", " + y)
         return true;
       }
     }
@@ -69,6 +71,7 @@ class App extends Component {
       if(!squares[a][j] && !placed) {
         squares[a][j] = this.state.xIsNext ? "X" : "O";
         placed = true;
+        i = a;
       }
     });
     if (!placed) {
