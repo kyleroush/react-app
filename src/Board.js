@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Square from './Square.js';
 
+// Uplift to take in a map of squares and a render function
+// The render function take in the value of the square an the x and y and returns a value
+// Have the ability to override the loop function to loop and render the squares
 class Board extends Component {
   renderSquare(i, j) {
     return (

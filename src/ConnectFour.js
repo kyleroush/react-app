@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Board from './Board.js';
 import './index.css';
+import { Button, ListItemText, MenuItem, MenuList } from '@material-ui/core';
 
 class App extends Component {
   constructor(props) {
@@ -113,9 +114,9 @@ class App extends Component {
         'Go to move #' + move :
         'Go to game start';
       return (
-        <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
-        </li>
+        <MenuItem onClick={() => this.jumpTo(move)} >
+          <ListItemText primary={desc} />
+        </MenuItem>
       );
     });
 
@@ -136,7 +137,7 @@ class App extends Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{moves}</ol>
+          <MenuList>{moves}</MenuList>
         </div>
       </div>
     );

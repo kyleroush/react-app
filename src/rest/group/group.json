@@ -1,0 +1,13 @@
+{ 
+    "id": 1,
+    "name": "blob",
+    "coverPic": "url",
+    "etag": 1,
+    "owner": {
+        "id": 1,
+        "type": "group"
+    },
+    "desc": "when you blobing around",
+    "isPrivate": true
+
+}

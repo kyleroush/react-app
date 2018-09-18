@@ -1,0 +1,80 @@
+[
+    { 
+        "id": 1,
+        "name": "blob",
+        "coverPic": "url",
+        "etag": 1,
+        "owner": {
+            "id": 1,
+            "type": "group"
+        },
+        "desc": "when you blobing around",
+        "isPrivate": false
+    
+    },
+    { 
+        "id": 2,
+        "name": "heck",
+        "coverPic": "url",
+        "etag": 1,
+        "owner": {
+            "id": 1,
+            "type": "group"
+        },
+        "desc": "because heck",
+        "isPrivate": false
+    
+    },
+    { 
+        "id": 3,
+        "name": "thonk",
+        "coverPic": "url",
+        "etag": 1,
+        "owner": {
+            "id": 1,
+            "type": "group"
+        },
+        "desc": "when there is some much thinking",
+        "isPrivate": false
+    
+    },
+    { 
+        "id": 4,
+        "name": "facebook",
+        "coverPic": "url",
+        "etag": 1,
+        "owner": {
+            "id": 1,
+            "type": "group"
+        },
+        "desc": "facebooks emojis",
+        "isPrivate": false
+    
+    },
+    { 
+        "id": 5,
+        "name": "ameow",
+        "coverPic": "url",
+        "etag": 1,
+        "owner": {
+            "id": 1,
+            "type": "group"
+        },
+        "desc": "meow?",
+        "isPrivate": false
+    
+    },
+    { 
+        "id": 6,
+        "name": "party parrot",
+        "coverPic": "url",
+        "etag": 1,
+        "owner": {
+            "id": 1,
+            "type": "group"
+        },
+        "desc": "this a house party if you are ready for a party",
+        "isPrivate": false
+    
+    }
+]
