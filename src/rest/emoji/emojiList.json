@@ -1,80 +1,82 @@
-[
-    { 
-        "id": 1,
-        "name": "blob",
-        "image": "url",
-        "etag": 1,
-        "owner": {
+{
+    "items": [
+        { 
             "id": 1,
-            "type": "group"
+            "name": "blob",
+            "image": "url",
+            "etag": 1,
+            "owner": {
+                "id": 1,
+                "type": "group"
+            },
+            "desc": "when you blobing around",
+            "isPrivate": false
+        
         },
-        "desc": "when you blobing around",
-        "isPrivate": false
-    
-    },
-    { 
-        "id": 2,
-        "name": "heck",
-        "image": "url",
-        "etag": 1,
-        "owner": {
-            "id": 1,
-            "type": "group"
+        { 
+            "id": 2,
+            "name": "heck",
+            "image": "url",
+            "etag": 1,
+            "owner": {
+                "id": 1,
+                "type": "group"
+            },
+            "desc": "because heck",
+            "isPrivate": false
+        
         },
-        "desc": "because heck",
-        "isPrivate": false
-    
-    },
-    { 
-        "id": 3,
-        "name": "thonk",
-        "image": "url",
-        "etag": 1,
-        "owner": {
-            "id": 1,
-            "type": "group"
+        { 
+            "id": 3,
+            "name": "thonk",
+            "image": "url",
+            "etag": 1,
+            "owner": {
+                "id": 1,
+                "type": "group"
+            },
+            "desc": "when there is some much thinking",
+            "isPrivate": false
+        
         },
-        "desc": "when there is some much thinking",
-        "isPrivate": false
-    
-    },
-    { 
-        "id": 4,
-        "name": "facebook",
-        "image": "url",
-        "etag": 1,
-        "owner": {
-            "id": 1,
-            "type": "group"
+        { 
+            "id": 4,
+            "name": "facebook",
+            "image": "url",
+            "etag": 1,
+            "owner": {
+                "id": 1,
+                "type": "group"
+            },
+            "desc": "facebooks emojis",
+            "isPrivate": false
+        
         },
-        "desc": "facebooks emojis",
-        "isPrivate": false
-    
-    },
-    { 
-        "id": 5,
-        "name": "ameow",
-        "image": "url",
-        "etag": 1,
-        "owner": {
-            "id": 1,
-            "type": "group"
+        { 
+            "id": 5,
+            "name": "ameow",
+            "image": "url",
+            "etag": 1,
+            "owner": {
+                "id": 1,
+                "type": "group"
+            },
+            "desc": "meow?",
+            "isPrivate": false
+        
         },
-        "desc": "meow?",
-        "isPrivate": false
-    
-    },
-    { 
-        "id": 6,
-        "name": "party_parrot",
-        "image": "url",
-        "etag": 1,
-        "owner": {
-            "id": 1,
-            "type": "group"
-        },
-        "desc": "this a house party if you are ready for a party",
-        "isPrivate": false
-    
-    }
-]
+        { 
+            "id": 6,
+            "name": "party_parrot",
+            "image": "url",
+            "etag": 1,
+            "owner": {
+                "id": 1,
+                "type": "group"
+            },
+            "desc": "this a house party if you are ready for a party",
+            "isPrivate": false
+        
+        }
+    ]
+}
