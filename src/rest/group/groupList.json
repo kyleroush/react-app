@@ -3,7 +3,7 @@
         { 
             "id": 1,
             "name": "blob",
-            "coverPic": "url",
+            "coverPic": "https://emoji.slack-edge.com/T039B0HP2/blobpat/ec7c50919e6b3d93.png",
             "etag": 1,
             "owner": {
                 "id": 1,
@@ -16,7 +16,7 @@
         { 
             "id": 2,
             "name": "heck",
-            "coverPic": "url",
+            "coverPic": "https://emoji.slack-edge.com/T039B0HP2/heckcorner/2c1f6c20b343aa27.png",
             "etag": 1,
             "owner": {
                 "id": 1,
@@ -29,7 +29,7 @@
         { 
             "id": 3,
             "name": "thonk",
-            "coverPic": "url",
+            "coverPic": "https://emoji.slack-edge.com/T039B0HP2/ink/392d936c405ced52.png",
             "etag": 1,
             "owner": {
                 "id": 1,
@@ -42,7 +42,7 @@
         { 
             "id": 4,
             "name": "facebook",
-            "coverPic": "url",
+            "coverPic": "https://emoji.slack-edge.com/T039B0HP2/fb-wow/a832e3d5a5548742.gif",
             "etag": 1,
             "owner": {
                 "id": 1,
@@ -55,7 +55,7 @@
         { 
             "id": 5,
             "name": "ameow",
-            "coverPic": "url",
+            "coverPic": "https://emoji.slack-edge.com/T039B0HP2/blobcatmorning/7248d29ef0a7b8b9.png",
             "etag": 1,
             "owner": {
                 "id": 1,
@@ -68,7 +68,7 @@
         { 
             "id": 6,
             "name": "party parrot",
-            "coverPic": "url",
+            "coverPic": "https://emoji.slack-edge.com/T039B0HP2/party_parrot/ca2ea21ce822b04e.gif",
             "etag": 1,
             "owner": {
                 "id": 1,

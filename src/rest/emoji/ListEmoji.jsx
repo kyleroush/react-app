@@ -17,7 +17,7 @@ class ListEmoji extends Component {
   
   
     componentDidMount() {
-      const emojiRootUrl = "https://raw.githubusercontent.com/kyleroush/react-app/master/src/rest/emoji/ListEmoji.jsx";
+      const emojiRootUrl = "https://raw.githubusercontent.com/kyleroush/react-app/master/src/rest/emoji/emojiList.json";
 
       const url = emojiRootUrl;// + getFilters();
       fetch(url)

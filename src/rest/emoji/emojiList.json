@@ -3,80 +3,69 @@
         { 
             "id": 1,
             "name": "blob",
-            "image": "url",
+            "image": "https://emoji.slack-edge.com/T039B0HP2/blobpat/ec7c50919e6b3d93.png",
             "etag": 1,
             "owner": {
                 "id": 1,
                 "type": "group"
             },
-            "desc": "when you blobing around",
-            "isPrivate": false
-        
+            "desc": "when you blobing around"
         },
         { 
             "id": 2,
             "name": "heck",
-            "image": "url",
+            "image": "https://emoji.slack-edge.com/T039B0HP2/heckcorner/2c1f6c20b343aa27.png",
             "etag": 1,
             "owner": {
                 "id": 1,
                 "type": "group"
             },
-            "desc": "because heck",
-            "isPrivate": false
-        
+            "desc": "because heck"
         },
         { 
             "id": 3,
             "name": "thonk",
-            "image": "url",
+            "image": "https://emoji.slack-edge.com/T039B0HP2/ink/392d936c405ced52.png",
             "etag": 1,
             "owner": {
                 "id": 1,
                 "type": "group"
             },
-            "desc": "when there is some much thinking",
-            "isPrivate": false
-        
+            "desc": "when there is some much thinking"
         },
         { 
             "id": 4,
             "name": "facebook",
-            "image": "url",
+            "image": "https://emoji.slack-edge.com/T039B0HP2/fb-wow/a832e3d5a5548742.gif",
             "etag": 1,
             "owner": {
                 "id": 1,
                 "type": "group"
             },
-            "desc": "facebooks emojis",
-            "isPrivate": false
-        
+            "desc": "facebooks emojis"
         },
         { 
             "id": 5,
             "name": "ameow",
-            "image": "url",
+            "image": "https://emoji.slack-edge.com/T039B0HP2/blobcatmorning/7248d29ef0a7b8b9.png",
             "etag": 1,
             "owner": {
                 "id": 1,
                 "type": "group"
             },
-            "desc": "meow?",
-            "isPrivate": false
-        
+            "desc": "meow?"
         },
         { 
             "id": 6,
-            "name": "party_parrot",
-            "image": "url",
+            "name": "party parrot",
+            "image": "https://emoji.slack-edge.com/T039B0HP2/party_parrot/ca2ea21ce822b04e.gif",
             "etag": 1,
             "owner": {
                 "id": 1,
                 "type": "group"
             },
-            "desc": "this a house party if you are ready for a party",
-            "isPrivate": false
-        
+            "desc": "this a house party if you are ready for a party"
         }
     ]
+
 }

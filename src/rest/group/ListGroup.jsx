@@ -34,7 +34,7 @@ class ListGroup extends Component {
           // exceptions from actual bugs in components.
           (error) => {
             this.setState({
-              isLoaded: true,
+              isLoaded: false,
               error: error.message
             });
           }
