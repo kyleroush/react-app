@@ -1,15 +1,15 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 
-class NewEmoji extends React.Component {
+class NotFound extends React.Component {
     render() {
         return(
             <div>
                 <Typography>
-                    This Page is the new Emoji page.
+                    This Page is not found.
                 </Typography>
             </div>
         );
     }
 }
-export default NewEmoji;
+export default NotFound;

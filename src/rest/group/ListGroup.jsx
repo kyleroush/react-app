@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, ListItem, Avatar, ListItemText, GridList, GridListTile, ListSubheader, GridListTileBar } from '@material-ui/core';
+import { List, ListItem, Avatar, ListItemText, GridList, GridListTile, ListSubheader, GridListTileBar, Typography } from '@material-ui/core';
 
 
 class ListGroup extends Component {
@@ -8,7 +8,9 @@ class ListGroup extends Component {
       this.state = {
         error: null,
         isLoaded: false,
-        items: []
+        items: [],
+        offset: 0,
+        limit: 20
       };
       // const groupRootUrl = "https://gist.githubusercontent.com/kyleroush/83640c24b7d88c72cc0a7334116f9469/raw/d2bdfd80b1cdc9d659211583d0ed302407945004/gistfile1.txt";
     
@@ -19,14 +21,16 @@ class ListGroup extends Component {
     componentDidMount() {
       const groupRootUrl = "https://raw.githubusercontent.com/kyleroush/react-app/master/src/rest/group/groupList.json";
 
-      const url = groupRootUrl;// + getFilters();
+
+      const url = groupRootUrl;// + getFilters() + addPagination();
       fetch(url)
         .then(res => res.json())
         .then(
           (result) => {
             this.setState({
               isLoaded: true,
-              items: result.items
+              items: result.items,
+              totalResults: 6//result.totalResults
             });
           },
           // Note: it's important to handle errors here
@@ -42,7 +46,7 @@ class ListGroup extends Component {
     }
   
     render() {
-      const { error, isLoaded, items } = this.state;
+      const { error, isLoaded, items, totalResults} = this.state;
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
@@ -50,10 +54,11 @@ class ListGroup extends Component {
       } else {
         return (
           <div >
+            <Typography>There are a total of {totalResults} Groups.</Typography>
             <GridList>
               {items.map(item => (
                 <GridListTile key={item.name}>
-                    <img src={item.img} alt={item.name} />
+                    <img src={item.coverPic} alt={item.name} />
                     <GridListTileBar
                     title={item.name}
                     subtitle={<span>by: text</span>}

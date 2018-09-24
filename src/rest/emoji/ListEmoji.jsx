@@ -53,7 +53,7 @@ class ListEmoji extends Component {
             <List>
               {items.map(item => (
                 <ListItem key={item.name} dense button >
-                  <img  width={25}  alt={item.name} src={item.img} />
+                  <img  width={25}  alt={item.name} src={item.image} />
                   <ListItemText primary={item.name} />
                 </ListItem>
               ))}
