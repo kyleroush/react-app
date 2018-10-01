@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, FormControlLabel, Checkbox } from '@material-ui/core';
+import { TextField, FormControlLabel, Checkbox, Button, Input } from '@material-ui/core';
 
 class EmojiForm extends React.Component {
   constructor(props) {
@@ -89,6 +89,8 @@ class EmojiForm extends React.Component {
             }
             label="isPrivate"
           />
+          <br />
+          <Button onClick={()=>this.props.submit(this.state)}>{this.props.action}</Button>
       </form>
     );
   }

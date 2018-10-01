@@ -12,6 +12,11 @@ class UpdateEmoji extends React.Component {
         };      
     }
 
+    submit = state => {
+        const updatedEmoji = {id: 1}
+        window.location.pathname = "/react-app/emoji/" + updatedEmoji.id
+    };
+
     componentDidMount() {
         const groupRootUrl = "https://raw.githubusercontent.com/kyleroush/react-app/master/src/rest/emoji/emoji.json";
         const url = groupRootUrl;// + getFilters() + addPagination();
@@ -51,7 +56,7 @@ class UpdateEmoji extends React.Component {
                     <Typography>
                         This is emoji {this.props.match.params.id}
                     </Typography>
-                    <EmojiForm emoji={emoji}/>
+                    <EmojiForm action="update" submit={this.submit} emoji={emoji}/>
                 </div>
             );
         }

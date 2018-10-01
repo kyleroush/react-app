@@ -12,6 +12,11 @@ class UpdateGroup extends React.Component {
         };      
     }
 
+    submit = state => {
+        const updatedGroup = {id: 1}
+        window.location.pathname = "/react-app/group/" + updatedGroup.id
+    };
+
     componentDidMount() {
         const groupRootUrl = "https://raw.githubusercontent.com/kyleroush/react-app/master/src/rest/group/group.json";
         const url = groupRootUrl;// + getFilters() + addPagination();
@@ -52,7 +57,7 @@ class UpdateGroup extends React.Component {
                     <Typography>
                         This is group {this.props.match.params.id}
                     </Typography>
-                    <GroupForm group={group}/>
+                    <GroupForm action="Update" submit={this.submit} group={group}/>
                 </div>
             );
         }

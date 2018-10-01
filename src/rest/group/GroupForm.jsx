@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, FormControlLabel, Checkbox } from '@material-ui/core';
+import { TextField, FormControlLabel, Checkbox, Button } from '@material-ui/core';
 
 class GroupForm extends React.Component {
   constructor(props) {
@@ -90,6 +90,8 @@ class GroupForm extends React.Component {
             }
             label="isPrivate"
           />
+          <br />
+          <Button onClick={()=>this.props.submit(this.state)}>{this.props.action}</Button>
       </form>
     );
   }
