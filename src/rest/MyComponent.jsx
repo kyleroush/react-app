@@ -113,7 +113,7 @@ class MyComponent extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <Button color="inherit" className={classes.button} href="/">
+            <Button color="inherit" className={classes.button} href="/react-app">
               <Typography className={classes.title} variant="title" color="inherit" noWrap >
                 Emoji Lyfe
               </Typography>
@@ -122,7 +122,7 @@ class MyComponent extends React.Component {
               <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
-              <form action="/search" >
+              <form action="/react-app/search" >
                 <Input
                   name="q"
                   placeholder="Search…"
@@ -159,12 +159,12 @@ class MyComponent extends React.Component {
                 open={open}
                 onClose={this.handleClose}
               >
-                <MenuItem ><Button href="/group/new">new Group</Button></MenuItem>
-                <MenuItem ><Button href="/emoji/new">new Emoji</Button></MenuItem>
+                <MenuItem ><Button href="/react-app/group/new">new Group</Button></MenuItem>
+                <MenuItem ><Button href="/react-app/emoji/new">new Emoji</Button></MenuItem>
               </Menu>
             </div>
             <div className={classes.sectionDesktop}>
-              <IconButton color="inherit" href="/notifications" >
+              <IconButton color="inherit" href="/react-app/notifications" >
               { this.state.notifications ? 
                 <Badge className={classes.margin} badgeContent={this.state.notifications} color="secondary">
                   <NotificationsIcon />
@@ -173,7 +173,7 @@ class MyComponent extends React.Component {
               }
               </IconButton>
               <IconButton
-                  href="/login"
+                  href="/react-app/login"
                   aria-owns="material-appbar"
                   aria-haspopup="true"
                   color="inherit"
