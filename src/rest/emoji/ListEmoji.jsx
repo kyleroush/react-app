@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, ListItem, Avatar, ListItemText } from '@material-ui/core';
+import { List, ListItem, ListItemText, Button } from '@material-ui/core';
 
 
 class ListEmoji extends Component {
@@ -55,6 +55,7 @@ class ListEmoji extends Component {
                 <ListItem key={item.name} dense button >
                   <img  width={25}  alt={item.name} src={item.image} />
                   <ListItemText primary={item.name} />
+                  <Button href={"/react-app/emoji/" + item.id} > Single </Button>
                 </ListItem>
               ))}
             </List>

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import ListGroup from './group/ListGroup';
 import ListEmoji from './emoji/ListEmoji';
-import SearchFilter from './search/SearchFilter';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';

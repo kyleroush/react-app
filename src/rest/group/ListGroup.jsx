@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { List, ListItem, Avatar, ListItemText, GridList, GridListTile, ListSubheader, GridListTileBar, Typography } from '@material-ui/core';
+import { GridList, GridListTile, GridListTileBar, Typography, IconButton } from '@material-ui/core';
+import InfoIcon from '@material-ui/icons/Info';
 
 
 class ListGroup extends Component {
@@ -60,8 +61,13 @@ class ListGroup extends Component {
                 <GridListTile key={item.name}>
                     <img src={item.coverPic} alt={item.name} />
                     <GridListTileBar
-                    title={item.name}
-                    subtitle={<span>by: text</span>}
+                      title={item.name}
+                      subtitle={<span>by: </span>}
+                      actionIcon={
+                        <IconButton href={"/react-app/group/" + item.id}>
+                          <InfoIcon />
+                        </IconButton>
+                      }
                     />
                 </GridListTile>
               ))}

@@ -12,12 +12,8 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-// import AddIcon from '@material-ui/icons/AddIcon';
-import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
 import { Button } from '@material-ui/core';
-import { GoogleLogin } from 'react-google-login';
 import Add from '@material-ui/icons/Add';
 
 const styles = theme => ({
