@@ -6,7 +6,10 @@ class Home extends React.Component {
         return(
             <div>
                 <Typography>
-                    This is the Home page.
+                    List the Discords
+                    List the Slacks
+                    List the subreddits
+                    List Groups
                 </Typography>
             </div>
         );

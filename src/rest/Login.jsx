@@ -12,11 +12,8 @@ class Login extends React.Component {
     render() {
         return(
             <div>
-                <Typography>
-                    This Page is the login page.
-                </Typography>
                 <GoogleLogin
-                    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                    clientId="720480809303-063b44q42hupv3krkn4l0retj9stopg6.apps.googleusercontent.com"
                     buttonText="Login"
                     onSuccess={this.responseGoogle}
                     onFailure={this.responseGoogle}
